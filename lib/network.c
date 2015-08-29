@@ -173,7 +173,7 @@ uint16_t get_tcp_data_ptr(void) {
     else return(0);
 }
 
-uint16_t make_tcp_data_pos(uint8_t *buf,uint16_t pos, const prog_char *progmem_s) {
+uint16_t make_tcp_data_pos(uint8_t *buf,uint16_t pos, const char *progmem_s) {
     char c;
     while((c = pgm_read_byte(progmem_s++))) {
         buf[TCP_CHECKSUM+4+pos] = c;
